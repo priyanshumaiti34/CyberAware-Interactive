@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 204 10% 96%;
+    --foreground: 210 4% 12%;
+    --card: 204 10% 96%;
+    --card-foreground: 210 4% 12%;
+    --popover: 204 10% 96%;
+    --popover-foreground: 210 4% 12%;
+    --primary: 196 84% 44%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 9% 90%;
+    --secondary-foreground: 210 4% 12%;
+    --muted: 210 9% 90%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 196 84% 44%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 6% 88%;
+    --input: 210 6% 88%;
+    --ring: 196 84% 44%;
+  }
+
+  .dark {
+    --background: 220 15% 5%; /* Almost black */
+    --foreground: 120 70% 80%; /* Lighter green for readability */
+    --card: 220 15% 8%; /* Slightly lighter than background */
+    --card-foreground: 120 70% 80%;
+    --popover: 220 15% 5%;
+    --popover-foreground: 120 70% 80%;
+    --primary: 120 100% 50%; /* Vibrant green */
+    --primary-foreground: 220 15% 5%; /* Black text on green buttons */
+    --secondary: 120 15% 15%; /* Dark green */
+    --secondary-foreground: 120 70% 80%;
+    --muted: 120 15% 15%;
+    --muted-foreground: 120 40% 60%; /* Muted green */
+    --accent: 120 100% 50%; /* Vibrant green */
+    --accent-foreground: 220 15% 5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 120 20% 20%; /* Dark green border */
+    --input: 120 20% 20%;
+    --ring: 120 100% 50%; /* Green ring on focus */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+     /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+   /* Hide scrollbar for Chrome, Safari and Opera */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  .binary-rain-text {
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.8);
+  }
+  .text-glow {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  }
+}
